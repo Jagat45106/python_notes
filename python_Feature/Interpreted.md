@@ -15,3 +15,7 @@ When we execute python program, two process taken place internally
 - In EXECUTION PROCESS, The PVM reads the Python Intermediate Code(Byte Code) Line by Line and Converted into Machine Understable Code (Executable or binary Code) and It is read by OS and Processor and finally Gives Result.
 
 - Hence In Python Program execution, Compilation Process and Execution Process is taking place Line by Line conversion and It is one of the Interpretation Based Programming Language.
+
+**Definition of PVM ( Python Virtual Machine )**
+
+PVM is one program in Python Software and whose role is to read LINE by LINE of Byte Code and Converted into Machine Understable Code (Executable or binary Code)
