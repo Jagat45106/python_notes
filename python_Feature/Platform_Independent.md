@@ -10,7 +10,7 @@ OR
 
 OS is an Interface Between Program and Computer Hardware
 
-    - Examples: Windows OSes, Unix, Linux, Solaris, Mac, OS/2, Ubuntu...etc
+    - Examples: Windows OS, Unix, Linux, Solaris, Mac, OS/2, Ubuntu...etc
 
 ---
 
