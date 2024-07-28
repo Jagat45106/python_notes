@@ -13,3 +13,5 @@ Python programming language contains 11 features. They are:
 9. Embedded
 10. Both Functional and Object Oriented
 11. Supports Third Party Modules such as numpy, Matplotlib, pandas, scipy, scikit, seaborn, nlp, etc.
+
+![Alt text](pythonFeature.png)
