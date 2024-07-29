@@ -1,4 +1,4 @@
-
+![Alt text](fundamental_dataType.png)
 
 
 
