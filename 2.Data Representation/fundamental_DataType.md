@@ -1,3 +1,7 @@
+
+
+
+
 **Fundamental  Category Data Types**
 
 - The purpose of Fundamental  Category Data Types is " To Store Single Value "
