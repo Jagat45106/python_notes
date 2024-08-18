@@ -120,3 +120,168 @@ print(f"power({a},{m})={round(a**m,2)}")
 
 
 ## 2. Assignment Operator
+
+=>The purpose of Assigment Operator is that to "To store or Transfer  LHS Variable or LHS Expression Value to RHS 
+    Variable"
+=>The Symbol for assignment Operator is single equal to ( = )
+=>In Python Programming, we can use Assigment Operator in Two Ways. They are
+
+			1. Single Line Assigment
+			2. Multi Line Assigment
+-----------------------------------------------------------------------------------------------------------------------------
+1. Single Line Assigment
+-----------------------------------------------------------------------------------------------------------------------------
+=>Syntax:     varname=Value
+				OR
+			varname=Expression
+=>The Single Assigment Operator is used for Transfering at a time One Value from RHS to LHS Variable.
+------------------------
+Examples
+------------------------
+>>> a=10
+>>> b=20
+>>> c=a+b
+>>> print(a,b,c)----------10 20 30
+--------------
+>>> sno=10
+>>> name="Rossum"
+>>> marks=34.56
+>>> print(sno,name,marks)----------10 Rossum 34.56
+--------------------------------------------------------------------------------------------------------------------------------------------------
+2. Multi Line Assigment
+--------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:     Var1,Var2,......,Var-n = Val1,Val2,....,Val-n
+					OR
+		     Var1,Var2,......,Var-n = Expr1, Expr2,.....,Expr-n
+=>The Multi  Line Assigment Operator is used for Transfering at a time Multiple Values from RHS to LHS Variables.  
+=>In The Above Syntax, the Values of Val1,Val2,....,Val-n(RHS Values) are Assigned to Var1,Var2,......,Var-n(LHS ) 
+   Respectively OR the Values of Expr1, Expr2,.....,Expr-n (RHS Values) are Assigned to Var1,Var2,......,Var-n(LHS ) 
+   Respectively 
+-------------------------------
+Examples
+-------------------------------
+>>> a,b=10,20
+>>> c,d,e=a+b,a-b,a*b
+>>> print(a,b)-------------------10 20
+>>> print("Add=",c)-----------Add= 30
+>>> print("Sub=",d)-----------Sub= -10
+>>> print("Mul=",e)-----------Mul= 200
+--------------------------
+>>> sno,name,marks,colname=100,"Rossum",45.67,"JNTU"
+>>> print(sno)--------------100
+>>> print(name,marks,colname)----------Rossum 45.67 JNTU
+-----------------------------
+Most IMP---Swapping logic
+-----------------------------
+>>> a,b=10,20
+>>>print(a,b)---------10 20
+>>>a,b=b,a
+>>>print(a,b)---------20 10
+
+
+```
+#Program for Demonstrating Assignment Operator
+#AssigmentOperatorEx1.py
+a,b=float(input("Enter First Value:")),float(input("Enter Second Value:"))
+sum1,sub1,mul1,div1,fdiv1,mod1,exp1=a+b,a-b,a*b,a/b,a//b,a%b,a**b
+print("*"*50)
+print("\t\tResults of Assignment Operator")
+print("*"*50)
+print("\t\t\t{} + {}={}".format(a,b,sum1))
+print("\t\t\t{} - {}={}".format(a,b,sub1))
+print("\t\t\t{} * {}={}".format(a,b,mul1))
+print("\t\t\t{} / {}={}".format(a,b,div1))
+print("\t\t\t{} // {}={}".format(a,b,fdiv1))
+print("\t\t\t{} % {}={}".format(a,b,mod1))
+print("\t\t\t{} ** {}={}".format(a,b,exp1))
+print("*"*50)
+```
+
+```
+#Program for Swapping OR Interchaning of Two values by using Multi Line Assigment
+#AssigmentOperatorEx2.py--Logic-1
+a,b=input("Enter Value of a:"),input("Enter Value of b:")
+print('-'*50)
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+#Swapping Logic by using Multi Line assignment
+a,b=b,a # OR   b,a=a,b
+print("\tSwapped value of a={}".format(a))
+print("\tSwapped value of b={}".format(b))
+print('-'*50)
+
+```
+
+```
+#Program for Swapping OR Interchaning of Two values
+#AssigmentOperatorEx3.py--Logic-2
+a=input("Enter Value of a:")
+b=input("Enter Value of b:")
+print('-'*50)
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+#Swapping Logic
+k=a  # here k temp Var, which is Holding the value of a
+a=b
+b=k
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+```
+
+```
+#Program for Swapping OR Interchaning of Two values for Numerical Inetger values Only
+#AssigmentOperatorEx4.py--Logic-3
+a=int(input("Enter Value of a:"))
+b=int(input("Enter Value of b:"))
+print('-'*50)
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+#Swapping Logic
+a=a+b
+b=a-b
+a=a-b
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+```
+
+```
+#Program for Swapping OR Interchaning of Two values for Numerical Inetger values Only
+#AssigmentOperatorEx5.py--Logic-4
+a=int(input("Enter Value of a:"))
+b=int(input("Enter Value of b:"))
+print('-'*50)
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+#Swapping Logic
+a=a*b
+b=a//b
+a=a//b
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+```
+
+```
+#Program for Swapping OR Interchaning of Two values for Numerical Inetger values Only
+#AssigmentOperatorEx6.py--Logic-5
+a=int(input("Enter Value of a:"))
+b=int(input("Enter Value of b:"))
+print('-'*50)
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+#Swapping Logic
+a=a^b
+b=a^b
+a=a^b
+print("\tOriginal value of a={}".format(a))
+print("\tOriginal value of b={}".format(b))
+print('-'*50)
+```
+
