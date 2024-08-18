@@ -117,3 +117,6 @@ print("--------------OR--------------------")
 print(f"power({a},{m})={a**m}")
 print("--------------OR--------------------")
 print(f"power({a},{m})={round(a**m,2)}")
+
+
+## 2. Assignment Operator
