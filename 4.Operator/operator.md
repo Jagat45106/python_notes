@@ -285,3 +285,191 @@ print("\tOriginal value of b={}".format(b))
 print('-'*50)
 ```
 
+
+## 3.Relational Operators ( Comparison Operator )
+
+=>The purpose of Relational Operators is that "To Compare Two Values "
+=>If two or more Values OR Objects connected with Relational Operators then we It as Relational Expressions.
+=>The Result of Relational Expression is either True or False (Bool Values).
+=>The Relational Expression is also called Test Condition ( Simple Condition ) and whose Result can be either True 
+    OR False.
+=>In Python Programming, we have 6 types of Relational Operators. They are given in the following Table
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+SLNO           SYMBOL                   MEANING                    EXAMPLES
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.                     >                            greater than                print(10>2 )-------True
+											   print(10>20)-------False
+
+2.			<				Less Than		   print(10<20)--------True
+											   print(10<4)----------False
+
+3.                     ==                           Equality			   print(10==10)------True
+		    (Double Equal to)					   print(10==20)------False
+
+4.			!=				Not equal to		   print(10!=20)------True
+											   print(10!=10)------False
+
+5.			>=				greater than		  print(10>=10)-----True
+							or equal to		  print(7>=10)-------False
+
+6.			<=				Less than		   print(10<=20)-----True
+							or equal to		   print(20<=10)------False
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+NOTE:             String Comparison with Relational Operators
+----------           ------------------------------------------------------------------
+=>For String Comparison, PVM Considers the UNICODE  Char Set (UNIversal Code Character Set).
+=>Internally Every Alphabet Contains A Numerical Value, which is Obtained a Pre-Defined Function Called ord()
+=>Syntax:    ord("Alphabet")
+=>To Find out Character / Alphabet Name OR Special Symbol, we use a Pre-Defined Function Called chr().
+=>Syntax:    chr(Numerical Integer Value)
+-----------------------------------
+Examples:  All Upper Case Alphabets A,B.....Z starts Unicode Value from 65,66.....90.
+Examples:  All Lower Case Alphabets a,b,....z starts Unicode Value from 97,98.....122
+=========================================
+Examples:
+-----------------------------------
+>>> "A">"a"-------------------------False
+>>> "CAT">"RAT"------------------False
+>>> "INDIA"<"INDIa"--------------True
+>>> "WRONG">"WRNOG"-------True
+>>> "BHAGWAT">"bhagwat"----False
+
+
+
+```
+#Relational OperatorsEx1.py
+a=int(input("Enter First Value:"))
+b=int(input("Enter Second Value:"))
+print("*"*50)
+print("\tResult of Relational Operators")
+print("*"*50)
+print("\t\t{} > {} = {}".format(a,b,a>b))
+print("\t\t{} < {} = {}".format(a,b,a<b))
+print("\t\t{}=={} = {}".format(a,b,a==b))
+print("\t\t{}!={} = {}".format(a,b,a!=b))
+print("\t\t{}>={} = {}".format(a,b,a>=b))
+print("\t\t{}<={} = {}".format(a,b,a<=b))
+print("*"*50)
+#NOTE:
+# a>b , a<b , a==b, a!=b, a>=b , a<=b are called Relational Expression.
+```
+
+## 4. Logical Operators ( Comparision Operator )
+
+=>The purpose of Logical Operators is that "To combine Two OR More Relational Expressions".
+=>If two OR More Relational Expressions are connected with Logical Operators then It is Called Logical Expression.
+=>The Result of Logical Expression is either True OR False.
+=>The Logical Expression is also called Compound Test Condition and whose result can be either True or False.
+=>In Python Programming , we have 3 Types of Logical Operators. They are given following Table:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+SLNO	SYMBOL			MEANING
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.		and				Physical ANDing
+2.		or				Physical ORing
+3.		not				----------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. and Operator
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    RelExpr1 and RelExpr2
+=>The Functionality of 'and' Operator is shown in the following Truth Table:
+				--------------------------------------------------------------------
+				 RelExpr1     RelExpr2      RelExpr1 and RelExpr2
+				--------------------------------------------------------------------
+					True		False			False	
+					False	True				False
+					False	False			False
+					True		True				True
+				--------------------------------------------------------------------
+-------------------------
+Example1
+------------------------
+>>> True and False---------------False
+>>> False and True---------------False
+>>> False and False-------------False
+>>> True and True----------------True
+-----------------------------------------
+Examples-2
+-----------------------------------------
+>>> (10>2) and (4>3)-----------True-------Full length Evaluation
+>>> (10>20) and (10>2)--------False-----Short Circuit Evaluation
+>>> (10>3) and (10>20) and (30>3)-----False---Short Circuit Evaluation
+>>> (3>4) and (5>10) and (20>30)-------False---Short Circuit Evaluation
+***********************************************************************
+Short circuit evaluation in the case 'and' Operator
+***********************************************************************
+=>If Two Or More Relational Expression connected with 'and' Operator(Logical Expression) and If Initial Relational Expression evaulated as False then PVM will not Evaluate Rest of the Sub Sequent Relational Expressions and Result of Total Logical Expression is Considered as False. This Process of Evaluation is called Short Circuit Evaluation.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. or Operator
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax:    RelExpr1 or RelExpr2
+=>The Functionality of 'or' Operator is shown in the following Truth Table:
+				--------------------------------------------------------------------
+				 RelExpr1     RelExpr2      RelExpr1 or  RelExpr2
+				--------------------------------------------------------------------
+					True		False			True	
+					False	True				True		
+					False	False			False		
+					True		True				True		
+				--------------------------------------------------------------------
+-------------------------
+Examples-1
+-------------------------
+>>> True or False-------------------True
+>>> False or True-------------------True
+>>> False or False------------------False
+>>> True or True---------------------True
+---------------------------
+Examples-2
+---------------------------
+>>> (10>2) or (20>40)-----------True----------Short Circuit Evaluation
+>>> (10>20) or (20>30)----------False-------Full length Evaluation
+>>> (10>40) or (20>10) or (40>30)------True-------Short Circuit Evaluation
+>>> (10>40) or (2>-2) or (40>60) or (50>100)--------True----Short Circuit Evaluation
+>>> (1.3>1.2) or (10>11.2) or (23.45>2.3)-------------True---Short Circuit Evaluation
+>>> ("a">"A") or ("z">"a") or ("k">"x")-------------True------Short Circuit Evaluation
+***********************************************************************
+Short circuit evaluation in the case 'or' Operator
+***********************************************************************
+=>If Two Or More Relational Expression connected with 'or' Operator(Logical Expression) and If Initial Relational Expression evaulated as True then PVM will not Evaluate Rest of the Sub Sequent Relational Expressions and Result of Total Logical Expression is Considered as True. This Process of Evaluation is called Short Circuit Evaluation.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. not Operator
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+=>Syntax-1:    not RelExpr
+=>Syntax-2:    not (RelExpr1 and RelExpr2)
+=>Syntax-2:    not (RelExpr1 or RelExpr2)
+=>The Functionality of 'not' Operator is shown in the following Truth Table:
+				--------------------------------------------------------------------
+				 RelExpr1     not RelExpr1    
+				--------------------------------------------------------------------
+					True		False			
+					False	True					
+				--------------------------------------------------------------------
+---------------------------
+Example-1
+---------------------------
+>>> a=True
+>>> not a--------------------------------False
+>>> a=False
+>>> not a-------------------------------True
+		OR
+>>> not True--------------------------False
+>>> not False------------------------True
+---------------------------
+Examples-2
+----------------------------
+>>> a=100
+>>> not a--------------------False
+>>> not -127---------------False
+>>> not 0-------------------True
+------------------------------
+Examples-3
+------------------------------
+>>> a="Python"
+>>> not a--------------------False
+>>> a=""
+>>> not a--------------------True
+>>> a="$"
+>>> not a----------False
+
+
+
