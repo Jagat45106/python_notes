@@ -1,5 +1,9 @@
 
+![Alt text](iflese.png)
 
+![Alt text](if-else1.png)
+
+![Alt text](if-else2.png)
 
 
 
