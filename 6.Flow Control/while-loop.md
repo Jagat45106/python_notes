@@ -96,3 +96,13 @@ else:
         i=i+1
     else:
         print("=" * 50)
+
+
+
+#WhileLoopEx4.py
+word=input("Enter Any Word:") # PYTHON
+i=0
+while(i<len(word)):
+    print(word[i])
+    i=i+1
+
