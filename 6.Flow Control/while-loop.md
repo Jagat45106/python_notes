@@ -1,4 +1,9 @@
 
+![Alt text](whileloop.png)
+
+
+
+![Alt text](syntax.png)
 
 
 
