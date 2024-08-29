@@ -1,0 +1,59 @@
+		===========================================================
+				Python Ternary Operator ( if..else Operator)
+		===========================================================			
+=>In Python Programming, the Name of the Ternary Operator is " if..else Operator ".
+
+=>Syntax:		varname= Expr1  if  Test Cond  else  Expr2
+--------------------------------
+Explanation
+--------------------------------
+=>Here if and else the keywords.
+=>Here Test Condition can be either Relational Expression(Single Cond) OR Logical Expresion( Compound  Cond).
+=>Here the Result of Test Condition can be either True or False.
+=>If the Result of Test Condition is True then PVM Executes Expr1 and whose Result placed in LHS Varname.
+=>If the Result of Test Condition is False then PVM Executes Expr2 and whose Result placed in LHS Varname.
+=>At any Point of Time PVM Executes either Expr1 OR Expr2 and whose Result placed in LHS Varname.
+
+```
+#Two Numerical and find Biggest among them
+#TernaryOpEx1.py
+a=float(input("Enter Value of a:")) # a=10
+b=float(input("Enter Value of b:")) # b=50
+bv= a if  a>b  else  b
+print("Big({},{})={}".format(a,b,bv))
+```
+
+```
+#Two Numerical and find Biggest among them and check for equality
+#TernaryOpEx2.py
+a=float(input("Enter Value of a:")) # a=10
+b=float(input("Enter Value of b:")) # b=10
+res=a if a>b else b if b>a else "Both Values are equal"
+print("Big({},{})={}".format(a,b,res))
+```
+
+
+```
+#program for Deciding weather the Given Value is Palindrome or not
+#TernaryOpEx3.py
+value=input("Enter Any Value:")
+res="Palindrome" if value==value[::-1] else "Not Palindrome"
+print("{} is {}".format(value,res))
+```
+
+```
+#Program for Accepting a Numerical Value and decide weather It is +Ve or -Ve or Zero
+#TernaryOpEx4.py
+value=float(input("Enter Any Value:")) # 0
+res="Possitive" if value>0 else "Negative"  if value<0 else "ZERO"
+print('{} is {}'.format(value,res))
+```
+
+```
+#Program for Accepting a Numerical Value and decide weather It is  Even or odd
+#TernaryOpEx5.py
+value=float(input("Enter Any Value:"))
+result="Invalid Input,Don't Enter Zero OR -Ve Vals"  if value<=0 else "EVEN" if value%2==0 else "ODD"
+print("{} is {}".format(value,result))
+```
+
