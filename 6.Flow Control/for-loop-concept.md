@@ -161,4 +161,129 @@ else:
 
 
 
+#Program for Calculating Factorial of a Given Number
+#FactEx1.py
+#n!= 1 x 2 x 3 .....xn
+n=int(input("Enter a Number for Cal Factorial:"))
+if(n<0):
+    print("{} is Invalid Input".format(n))
+else:
+    fact=1
+    for i in range(1,n+1):
+        fact=fact*i
+    else:
+        print("Factorial({})={}".format(n,fact))
+
+
+
+
+#Program for Calculating Factorial of a Given Number
+#FactEx2.py
+#n!= nx n-1 x n-2.....x 1 X 0!
+n=int(input("Enter a Number for Cal Factorial:"))
+if(n<0):
+    print("{} is Invalid Input".format(n))
+else:
+    fact=1
+    for i in range(n,0,-1):
+        fact*=i
+    else:
+        print("{}!={}".format(n,fact))
+
+
+
+#Program for Calculating Factorial of a Given Number
+#FactEx3.py--with while loop
+#n!= nx n-1 x n-2.....x 1 X 0!
+n=int(input("Enter a Number for Cal Factorial:"))
+if(n<0):
+    print("{} is Invalid Input".format(n))
+else:
+    fact=1
+    i=1
+    while(i<=n):
+        fact=fact*i
+        i=i+1
+    else:
+        print("Fact({})={}".format(n,fact))
+
+
+
+
+#Program for Calculating Factorial of a Given Number
+#FactEx4.py--with while loop
+#n!= nx n-1 x n-2.....x 1 X 0!
+n=int(input("Enter a Number for Cal Factorial:"))
+if(n<0):
+    print("{} is Invalid Input".format(n))
+else:
+    fact=1
+    tn=n # we preserving value of n in tn
+    while(n>0):
+        fact=fact*n
+        n=n-1
+    else:
+        print("{}!={}".format(tn,fact))
+
+
+
+#Program for Finding Product of N Natural Nums
+#NatNumsProductEx.py
+n=int(input("Enter How Many Natural Numbers Product u want:"))
+if(n<=0):
+    print("{} is Invalid Input".format(n))
+else:
+    prod=1 # Multiplicative Identity
+    for i in range(1,n+1):
+        print(i)
+        prod=prod*i #OR prod*=i
+    else:
+        print("Product of {} Nat Nums={}".format(n,prod))
+
+
+
+
+#Program for Finding Number of chars in a line of Text
+#NumberCharEx1.py
+line=input("Enter a Line of Text:") # Py$th1on
+print("Given Line={}".format(line))
+noa=0
+for ch in line:
+    if(ch.isalpha()):
+        noa=noa+1
+else:
+    print("Number of Alphabets={}".format(noa))
+
+
+
+
+#Program for Finding Number of chars in a line of Text
+#NumberCharEx2.py
+line=input("Enter a Line of Text:") # Py#thon i1s a$n oop lang
+print("Given Line={}".format(line))
+words=line.split()
+noa=0
+for word in words:
+    for ch in word:
+        if(ch.isalpha()):
+            noa=noa+1
+else:
+    print("Number of Alphabets={}".format(noa))
+
+
+
+
+#Program for Finding Reverse of a Value without using Slicing and Reverse()
+#ReverseDataEx1.py
+value=input("Enter a Value:") # PYTHON
+s=""
+for ch in range(-1,-(len(value)+1),-1):
+    s=s+value[ch]
+else:
+    print("Given Value:{}".format(value))
+    print("Reversed Value={}".format(s))
+    if(value==s):
+        print("Given Value is Palindrome")
+    else:
+        print("Given Value is Not Palindrome")
 
